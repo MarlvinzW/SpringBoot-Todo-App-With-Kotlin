@@ -1,0 +1,23 @@
+# ===============================
+# = DATA SOURCE / JPA / HIBERNATE
+# ===============================
+
+spring:
+  application:
+    name: todo
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        hbm2ddl:
+          auto: update
+        show_sql: false
+
+    open-in-view: false
+
+  datasource:
+    tomcat:
+      test-while-idle: true
+    url: jdbc:postgresql://localhost:5432/todo
+    username: marlvin
+    password: marlvin123
